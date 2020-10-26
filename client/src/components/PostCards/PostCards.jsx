@@ -23,7 +23,7 @@ class PostCards extends Component {
         index < 8 ? (
           <PostCard
             _id={post._id}
-            name={post.name}
+            name={post.title}
             imgURL={post.imgURL}
             key={index}
           />

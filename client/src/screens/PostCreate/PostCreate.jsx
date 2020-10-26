@@ -6,10 +6,10 @@ import { createPost } from "../../services/posts";
 
 const PostCreate = (props) => {
   const [post, setPost] = useState({
-    name: "",
-    description: "",
+    title: "",
     imgURL: "",
-    price: "",
+    content: "",
+    author: "",
   });
 
   const [isCreated, setCreated] = useState(false);
@@ -18,7 +18,7 @@ const PostCreate = (props) => {
     const { name, value } = event.target;
     setPost({
       ...post,
-      [name]: value,
+      [name]: value, // [] not always an array, inside object allows you to declare variable as a key
     });
   };
 
@@ -36,27 +36,19 @@ const PostCreate = (props) => {
       <form className="create-form" onSubmit={handleSubmit}>
         <input
           className="input-name"
-          placeholder="Name"
-          value={post.name}
-          name="name"
+          placeholder="Title"
+          value={post.title}
+          name="title"
           required
           autoFocus
-          onChange={handleChange}
-        />
-        <input
-          className="input-price"
-          placeholder="Price"
-          value={post.price}
-          name="price"
-          required
           onChange={handleChange}
         />
         <textarea
           className="textarea-description"
           rows={10}
-          placeholder="Description"
-          value={post.description}
-          name="description"
+          placeholder="Content"
+          value={post.content}
+          name="content"
           required
           onChange={handleChange}
         />
@@ -65,6 +57,14 @@ const PostCreate = (props) => {
           placeholder="Image Link"
           value={post.imgURL}
           name="imgURL"
+          required
+          onChange={handleChange}
+        />
+        <input
+          className="input-image-link"
+          placeholder="Author"
+          value={post.author}
+          name="author"
           required
           onChange={handleChange}
         />

@@ -6,10 +6,9 @@ import { getPost, updatePost } from "../../services/posts";
 
 const PostEdit = (props) => {
   const [post, setPost] = useState({
-    name: "",
-    description: "",
+    title: "",
+    content: "",
     imgURL: "",
-    price: "",
   });
 
   const [isUpdated, setUpdated] = useState(false);
@@ -46,7 +45,7 @@ const PostEdit = (props) => {
     <Layout user={props.user}>
       <div className="post-edit">
         <div className="image-container">
-          <img className="edit-post-image" src={post.imgURL} alt={post.name} />
+          <img className="edit-post-image" src={post.imgURL} alt={post.title} />
           <form onSubmit={handleSubmit}>
             <input
               className="edit-input-image-link"
@@ -62,27 +61,27 @@ const PostEdit = (props) => {
           <input
             className="input-name"
             placeholder="Name"
-            value={post.name}
-            name="name"
+            value={post.title}
+            name="title"
             required
             autoFocus
-            onChange={handleChange}
-          />
-          <input
-            className="input-price"
-            placeholder="Price"
-            value={post.price}
-            name="price"
-            required
             onChange={handleChange}
           />
           <textarea
             className="textarea-description"
             rows={10}
             cols={78}
-            placeholder="Description"
-            value={post.description}
-            name="description"
+            placeholder="content"
+            value={post.content}
+            name="content"
+            required
+            onChange={handleChange}
+          />
+          <input
+            className="edit-input-image-link"
+            placeholder="Image Link"
+            value={post.author}
+            name="author"
             required
             onChange={handleChange}
           />

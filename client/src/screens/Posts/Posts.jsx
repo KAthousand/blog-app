@@ -42,7 +42,7 @@ const Posts = (props) => {
 
   const handleSearch = (event) => {
     const newQueriedPosts = allPosts.filter((post) =>
-      post.name.toLowerCase().includes(event.target.value.toLowerCase())
+      post.title.toLowerCase().includes(event.target.value.toLowerCase())
     );
     setQueriedPosts(newQueriedPosts);
   };
@@ -52,9 +52,9 @@ const Posts = (props) => {
   const postsJSX = queriedPosts.map((post, index) => (
     <Post
       _id={post._id}
-      name={post.name}
+      title={post.title}
       imgURL={post.imgURL}
-      price={post.price}
+      author={post.author}
       key={index}
     />
   ));

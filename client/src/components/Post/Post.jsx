@@ -8,7 +8,7 @@ const Post = (props) => {
       <Link className="post" to={`/posts/${props._id}`}>
         <img className="post-image" src={props.imgURL} alt={props.name} />
         <div className="post-name">{props.name}</div>
-        <div className="price">{`$${props.price}`}</div>
+        <div className="price">{`${props.author}`}</div>
       </Link>
     </>
   );
