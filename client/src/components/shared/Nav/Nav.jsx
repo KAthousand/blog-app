@@ -16,8 +16,16 @@ const Nav = () => {
           <NavLink className="link add" to="/add-post">
             Add Post
           </NavLink>
+
           <NavLink className="link david" to="david-screen">
             David screen
+          </NavLink>
+          <NavLink className="link" to="/cory-screen">
+            Cory Screen
+          </NavLink>
+          <NavLink className="link" to="/KevinScreen">
+            Kevin's page
+
           </NavLink>
         </div>
       </div>
