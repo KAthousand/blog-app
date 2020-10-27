@@ -1,0 +1,16 @@
+.cory-headline {
+  box-sizing: border-box;
+  font-size: 24px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #72293c;
+  text-align: center;
+}
+
+.cory-text {
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #28334a;
+}
