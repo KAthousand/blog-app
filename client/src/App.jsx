@@ -5,6 +5,7 @@ import Posts from "./screens/Posts/Posts";
 import PostCreate from "./screens/PostCreate/PostCreate";
 import PostEdit from "./screens/PostEdit/PostEdit";
 import PostDetail from "./screens/PostDetail/PostDetail";
+import KevinScreen from "./screens/KevinScreen/KevinScreen"
 import { Route, Switch } from "react-router-dom";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/add-post" component={PostCreate} />
         <Route exact path="/posts/:id/edit" component={PostEdit} />
         <Route exact path="/posts/:id" component={PostDetail} />
+        <Route exact path="/KevinScreen" component={KevinScreen}/>
       </Switch>
     </div>
   );
