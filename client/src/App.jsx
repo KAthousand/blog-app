@@ -6,7 +6,10 @@ import PostCreate from "./screens/PostCreate/PostCreate";
 import PostEdit from "./screens/PostEdit/PostEdit";
 import PostDetail from "./screens/PostDetail/PostDetail";
 import KyleScreen from "./screens/KyleScreen/KyleScreen";
+import CoryScreen from "./screens/CoryScreen/CoryScreen";
+import KevinScreen from "./screens/KevinScreen/KevinScreen";
 import { Route, Switch } from "react-router-dom";
+import DavidScreen from "./screens/DavidScreen";
 
 function App() {
   return (
@@ -18,6 +21,11 @@ function App() {
         <Route exact path="/posts/:id/edit" component={PostEdit} />
         <Route exact path="/posts/:id" component={PostDetail} />
         <Route exact path="/kyle" component={KyleScreen} />
+
+        <Route exact path="/david-screen" component={DavidScreen} />
+
+        <Route exact path="/cory-screen" component={CoryScreen} />
+        <Route exact path="/KevinScreen" component={KevinScreen} />
       </Switch>
     </div>
   );
